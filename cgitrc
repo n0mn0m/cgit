@@ -1,0 +1,111 @@
+#
+# cgit config
+# see cgitrc(5) for details
+
+root-title=Installation 04
+root-desc=Tools and Experiments
+
+source-filter=/usr/lib/cgit/filters/syntax-highlighting.sh
+
+# Format markdown, restructuredtext, manpages, text files, and html files
+# through the right converters
+about-filter=/usr/lib/cgit/filters/about-formatting.sh
+
+##
+## Search for these files in the root of the default branch of repositories
+## for coming up with the about page:
+##
+readme=:README.md
+readme=:readme.md
+readme=:README.mkd
+readme=:readme.mkd
+readme=:README.rst
+readme=:readme.rst
+readme=:README.html
+readme=:readme.html
+readme=:README.htm
+readme=:readme.htm
+readme=:README.txt
+readme=:readme.txt
+readme=:README
+readme=:readme
+readme=:INSTALL.md
+readme=:install.md
+readme=:INSTALL.mkd
+readme=:install.mkd
+readme=:INSTALL.rst
+readme=:install.rst
+readme=:INSTALL.html
+readme=:install.html
+readme=:INSTALL.htm
+readme=:install.htm
+readme=:INSTALL.txt
+readme=:install.txt
+readme=:INSTALL
+readme=:install
+
+# Default Theme
+css=/cgit-css/cgit.css
+logo=/cgit-css/arcade.png
+favicon=/cgit-css/avacado.ico
+
+# Cache
+cache-root=/var/cache/cgit
+cache-size=1000
+
+# Specify some default clone urls using macro expansion
+clone-url=http://git.burningdaylight.io/repos/$CGIT_REPO_URL git@git.burningdaylight.io:repos/$CGIT_REPO_URL
+
+# Show extra links for each repository on the index page
+enable-index-links=1
+
+# Show owner on index page
+enable-index-owner=1
+
+enable-remote-branches=1
+
+# Show number of affected files per commit on the log pages
+enable-log-filecount=1
+
+# Show number of added/removed lines per commit on the log pages
+enable-log-linecount=1
+
+# Source gitweb.description, gitweb.owner from each project config
+enable-git-config=1
+
+# Remove .git suffix from project display
+remove-suffix=1
+
+# Allow http transport git clone
+enable-git-clone=0
+
+# Sort branches by date
+branch-sort=age
+
+# Enable statistics per week, month and quarter
+max-stats=quarter
+
+# Include some more info about example.com on the index page
+root-readme=/var/www/git/about.htm
+
+# Allow download of tar.gz, tar.bz2 and zip-files
+snapshots=tar.gz tar.bz2 zip
+
+##
+## List of common mimetypes
+##
+mimetype.gif=image/gif
+mimetype.html=text/html
+mimetype.jpg=image/jpeg
+mimetype.jpeg=image/jpeg
+mimetype.pdf=application/pdf
+mimetype.png=image/png
+mimetype.svg=image/svg+xml
+
+robots=noindex, nofollow
+
+virtual-root=/
+section-from-path=1
+max-repo-count=100
+scan-path=/srv/git/
+repo.defbranch=main
